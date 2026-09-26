@@ -149,7 +149,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
 
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                   <a
-                    href="mailto:founders@formastudio.dev?subject=Direct%20Inquiry%20from%20FORMA"
+                    href="mailto:founders@brandorastudio.dev?subject=Direct%20Inquiry%20from%20Brandora%20Studio"
                     className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-code tracking-wider text-zinc-300 transition-colors hover:border-white/30 hover:text-white"
                   >
                     <Mail className="h-3.5 w-3.5" />

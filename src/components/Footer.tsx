@@ -37,15 +37,19 @@ export default function Footer({ onOpenInquiry }: FooterProps) {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           {/* Studio Brand & Mission */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-2.5 font-display text-xl font-bold tracking-tight text-white uppercase">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-black text-xs font-black">
-                F
-              </span>
-              <span className="tracking-widest">FORMA STUDIO</span>
+            <div className="flex items-center gap-3 font-display text-xl font-bold tracking-tight text-white uppercase">
+              <div className="relative flex h-8 w-8 items-center justify-center rounded-full overflow-hidden border border-white/20 bg-black shadow-[0_0_15px_rgba(255,255,255,0.15)]">
+                <img
+                  src="/brandora-logo.png"
+                  alt="Brandora Studio"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <span className="tracking-widest font-heading font-extrabold">BRANDORA STUDIO</span>
             </div>
 
             <p className="max-w-sm text-xs sm:text-sm leading-relaxed text-zinc-400 font-sans">
-              A specialized two-person digital studio uniting modern full-stack web engineering and performance marketing to build enduring commercial value.
+              A specialized two-person digital studio uniting modern full-stack web engineering, social media strategy, and data-driven brand growth to build enduring commercial value.
             </p>
 
             <div className="pt-2">
@@ -112,7 +116,7 @@ export default function Footer({ onOpenInquiry }: FooterProps) {
         {/* Bottom Baseline Bar */}
         <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-white/8 pt-8">
           <div className="font-code text-[11px] text-zinc-500">
-            © {new Date().getFullYear()} FORMA DIGITAL STUDIO. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} BRANDORA STUDIO. ALL RIGHTS RESERVED.
           </div>
 
           {/* Back to top button */}

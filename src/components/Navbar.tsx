@@ -48,14 +48,20 @@ export default function Navbar({ onOpenInquiry }: NavbarProps) {
           {/* Left: Studio Brand */}
           <a
             href="#"
-            className="group flex items-center gap-2.5 font-display text-lg font-bold tracking-tight text-white uppercase"
+            className="group flex items-center gap-3 font-display text-lg font-bold tracking-tight text-white uppercase"
             data-cursor="pointer"
           >
-            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-black text-xs font-black transition-transform group-hover:rotate-45">
-              F
-            </span>
-            <span className="tracking-widest">FORMA</span>
-            <span className="font-code text-[10px] text-zinc-500 font-normal">STUDIO</span>
+            <div className="relative flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full overflow-hidden border border-white/20 bg-black shadow-[0_0_15px_rgba(255,255,255,0.15)] transition-transform group-hover:scale-105">
+              <img
+                src="/brandora-logo.png"
+                alt="Brandora Studio"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex items-baseline gap-1.5">
+              <span className="tracking-widest font-heading font-extrabold text-white text-base sm:text-lg">BRANDORA</span>
+              <span className="font-code text-[10px] text-zinc-400 font-normal tracking-wider">STUDIO</span>
+            </div>
           </a>
 
           {/* Center: Desktop Navigation */}
@@ -178,8 +184,8 @@ export default function Navbar({ onOpenInquiry }: NavbarProps) {
               </button>
 
               <div className="flex items-center justify-center gap-6 font-code text-xs text-zinc-500">
-                <a href="mailto:founders@formastudio.dev" className="hover:text-white">
-                  founders@formastudio.dev
+                <a href="mailto:founders@brandorastudio.dev" className="hover:text-white">
+                  founders@brandorastudio.dev
                 </a>
               </div>
             </div>

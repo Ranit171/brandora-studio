@@ -11,7 +11,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Co-Founder & CEO',
     company: 'Nova Robotics',
     quote:
-      'FORMA is the rarest kind of agency: they possess the visual sophistication of a high-end Paris design house combined with engineering discipline that produces sub-second, rock-solid code. Our inbound demo requests skyrocketed within three weeks of launch.',
+      'Brandora Studio is the rarest kind of agency: they possess the visual sophistication of a high-end Paris design house combined with engineering discipline that produces sub-second, rock-solid code. Our inbound demo requests skyrocketed within three weeks of launch.',
     highlightMetric: '+240%',
     metricLabel: 'Enterprise Pipeline Growth',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop'

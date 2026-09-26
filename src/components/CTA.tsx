@@ -56,7 +56,7 @@ export default function CTA({ onOpenInquiry }: CTAProps) {
             </MagneticButton>
 
             <a
-              href="mailto:founders@formastudio.dev?subject=Project%20Inquiry%20via%20FORMA%20Studio"
+              href="mailto:founders@brandorastudio.dev?subject=Project%20Inquiry%20via%20Brandora%20Studio"
               data-cursor="pointer"
               className="group flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-8 sm:px-10 py-4 sm:py-5 text-xs sm:text-sm font-code font-semibold tracking-wider text-white backdrop-blur-md transition-colors hover:border-white/40 hover:bg-white/10"
             >
@@ -73,10 +73,10 @@ export default function CTA({ onOpenInquiry }: CTAProps) {
                   DIRECT STUDIO INBOX
                 </div>
                 <a
-                  href="mailto:founders@formastudio.dev"
+                  href="mailto:founders@brandorastudio.dev"
                   className="font-display text-lg sm:text-xl font-bold text-white hover:text-[#ff477e] transition-colors"
                 >
-                  founders@formastudio.dev
+                  founders@brandorastudio.dev
                 </a>
               </div>
 

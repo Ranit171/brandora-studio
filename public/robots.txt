@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://formastudio.dev/sitemap.xml
+Sitemap: https://brandorastudio.dev/sitemap.xml

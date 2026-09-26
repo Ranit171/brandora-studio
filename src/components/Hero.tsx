@@ -166,7 +166,7 @@ export default function Hero({ onOpenInquiry, onViewWork }: HeroProps) {
               </defs>
               <text className="font-code text-[8.5px] uppercase tracking-[2.5px] fill-zinc-400">
                 <textPath href="#circlePath" startOffset="0%">
-                  • SCROLL TO EXPLORE • FORMA STUDIO
+                  • SCROLL TO EXPLORE • BRANDORA STUDIO
                 </textPath>
               </text>
             </motion.svg>
