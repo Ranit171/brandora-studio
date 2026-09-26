@@ -1,0 +1,6 @@
+{
+  "name": "FORMA STUDIO",
+  "description": "Two-person digital studio uniting high-performance web development and data-driven digital marketing for ambitious brands.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
