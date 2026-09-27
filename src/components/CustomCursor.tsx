@@ -60,7 +60,7 @@ export default function CustomCursor() {
     <div className="pointer-events-none fixed inset-0 z-9999 overflow-hidden">
       {/* Outer follow circle / pill */}
       <motion.div
-        className="fixed top-0 left-0 flex items-center justify-center font-code text-[11px] font-medium tracking-wider uppercase"
+        className="pointer-events-none fixed top-0 left-0 flex items-center justify-center font-code text-[11px] font-medium tracking-wider uppercase select-none"
         animate={{
           x: mousePosition.x,
           y: mousePosition.y,

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ArrowRight, ArrowUpRight, CheckCircle2, TrendingUp, Cpu } from 'lucide-react';
 import { Project } from '../types';
@@ -16,19 +16,36 @@ export default function CaseStudyModal({
   onNextProject,
   allProjects
 }: CaseStudyModalProps) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
+
     if (project) {
       document.body.style.overflow = 'hidden';
+      // Pause smooth scroll on main page so wheel events don't leak to background
+      const lenis = (window as unknown as { __lenisInstance?: { stop: () => void; start: () => void } }).__lenisInstance;
+      lenis?.stop();
       window.addEventListener('keydown', handleKeyDown);
     }
+
     return () => {
       document.body.style.overflow = '';
+      // Resume smooth scroll on main page
+      const lenis = (window as unknown as { __lenisInstance?: { stop: () => void; start: () => void } }).__lenisInstance;
+      lenis?.start();
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [project, onClose]);
+
+  // Reset scroll to top when opening or switching projects
+  useEffect(() => {
+    if (project && scrollRef.current) {
+      scrollRef.current.scrollTop = 0;
+    }
+  }, [project?.id]);
 
   if (!project) return null;
 
@@ -37,7 +54,14 @@ export default function CaseStudyModal({
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-100 overflow-y-auto bg-black/90 backdrop-blur-xl">
+      <div
+        ref={scrollRef}
+        data-lenis-prevent
+        data-lenis-prevent-wheel
+        data-lenis-prevent-touch
+        className="fixed inset-0 z-100 overflow-y-auto overscroll-contain bg-black/90 backdrop-blur-xl"
+        style={{ WebkitOverflowScrolling: 'touch' }}
+      >
         {/* Floating Top Control Bar */}
         <div className="sticky top-0 z-50 flex items-center justify-between border-b border-white/10 bg-[#09090b]/80 px-6 py-4 backdrop-blur-md">
           <div className="flex items-center gap-3">
@@ -170,7 +194,7 @@ export default function CaseStudyModal({
                 </h4>
               </div>
               <p className="mt-2 text-xs text-zinc-400 font-code">
-                ENGINEERED BY ALEX VANCE
+                ENGINEERED BY RANIT BASAK
               </p>
               <ul className="mt-6 space-y-3.5">
                 {project.whatWeBuilt.map((item, idx) => (
@@ -191,7 +215,7 @@ export default function CaseStudyModal({
                 </h4>
               </div>
               <p className="mt-2 text-xs text-zinc-400 font-code">
-                DIRECTED BY ELENA VANCE
+                DIRECTED BY ARNAB MAJUMDAR
               </p>
               <ul className="mt-6 space-y-3.5">
                 {project.marketingApproach.map((item, idx) => (

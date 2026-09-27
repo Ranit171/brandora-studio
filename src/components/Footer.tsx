@@ -57,7 +57,7 @@ export default function Footer({ onOpenInquiry }: FooterProps) {
                 DIRECT FOUNDER PARTNERSHIP
               </div>
               <div className="font-code text-xs text-zinc-300 mt-1">
-                Alex Vance (Tech) × Elena Vance (Growth)
+                Ranit Basak (Tech) × Arnab Majumdar (Growth)
               </div>
             </div>
           </div>

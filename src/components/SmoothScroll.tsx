@@ -1,5 +1,6 @@
 import { useEffect, ReactNode } from 'react';
 import Lenis from 'lenis';
+import 'lenis/dist/lenis.css';
 
 interface SmoothScrollProps {
   children: ReactNode;
@@ -20,7 +21,13 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
       smoothWheel: true,
       wheelMultiplier: 0.95,
       touchMultiplier: 1.5,
-      infinite: false
+      infinite: false,
+      prevent: (node) => {
+        return Boolean(
+          node?.hasAttribute?.('data-lenis-prevent') ||
+          node?.closest?.('[data-lenis-prevent]')
+        );
+      }
     });
 
     let animationFrameId: number;

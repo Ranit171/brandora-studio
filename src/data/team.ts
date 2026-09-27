@@ -2,7 +2,7 @@ import { Founder } from '../types';
 
 export const FOUNDERS: Founder[] = [
   {
-    name: 'Alex Vance',
+    name: 'Ranit Basak',
     role: 'Founder / Lead Web Architect & Creative Technologist',
     discipline: 'Engineering & Web Architecture',
     bio: 'Specializing in modern full-stack web development, interactive WebGL experiences, editorial design engineering, and obsessive performance tuning. 10+ years engineering high-speed web apps that never falter under scale.',
@@ -15,11 +15,11 @@ export const FOUNDERS: Founder[] = [
       'Core Web Vitals & Sub-Second Loading',
       'Clean Code & Technical Architecture'
     ],
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop',
+    avatar: 'https://ik.imagekit.io/ranit007/Brandora%20Studio/ChatGPT%20Image%20Sep%2027,%202026,%2011_55_56%20PM.png',
     coordinates: 'DEV × ARCHITECTURE'
   },
   {
-    name: 'Elena Vance',
+    name: 'Arnab Majumdar',
     role: 'Founder / Head of Growth & Digital Strategy',
     discipline: 'Growth & Digital Marketing',
     bio: 'Data-driven growth strategist and conversion architect. Former growth lead for high-velocity direct-to-consumer and B2B SaaS ventures, orchestrating millions in profitable paid media and dominant organic search engines.',
@@ -32,7 +32,7 @@ export const FOUNDERS: Founder[] = [
       'Algorithmic Customer Acquisition',
       'Brand Positioning & Messaging'
     ],
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop',
+    avatar: 'https://ik.imagekit.io/ranit007/Brandora%20Studio/IMG_4236-removebg-preview.png',
     coordinates: 'GROWTH × ACQUISITION'
   }
 ];

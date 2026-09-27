@@ -48,6 +48,26 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  React.useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+
+    document.body.style.overflow = 'hidden';
+    const lenis = (window as unknown as { __lenisInstance?: { stop: () => void; start: () => void } }).__lenisInstance;
+    lenis?.stop();
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = '';
+      const lenis = (window as unknown as { __lenisInstance?: { stop: () => void; start: () => void } }).__lenisInstance;
+      lenis?.start();
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
   const toggleService = (service: string) => {
     setFormData((prev) => {
       const exists = prev.services.includes(service);
@@ -85,7 +105,12 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-y-auto">
+        <div
+          data-lenis-prevent
+          data-lenis-prevent-wheel
+          data-lenis-prevent-touch
+          className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-y-auto overscroll-contain"
+        >
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -144,7 +169,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                   INQUIRY RECEIVED
                 </h4>
                 <p className="mx-auto mt-2 max-w-md text-sm text-zinc-400">
-                  Thank you, <span className="text-white font-medium">{formData.name}</span>. Both Alex (Engineering) and Elena (Growth) will review your project and get back to you within 24 hours.
+                  Thank you, <span className="text-white font-medium">{formData.name}</span>. Both Ranit (Engineering) and Arnab (Growth) will review your project and get back to you within 24 hours.
                 </p>
 
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

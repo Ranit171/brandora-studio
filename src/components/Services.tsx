@@ -213,7 +213,7 @@ export default function Services({ onOpenInquiry }: ServicesProps) {
                         {hoveredService.tag}
                       </span>
                       <span className="font-code text-[11px] text-zinc-300">
-                        {hoveredService.discipline === 'web' ? 'Alex Vance' : 'Elena Vance'}
+                        {hoveredService.discipline === 'web' ? 'Ranit Basak' : 'Arnab Majumdar'}
                       </span>
                     </div>
                   </div>
