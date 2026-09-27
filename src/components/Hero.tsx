@@ -99,8 +99,8 @@ export default function Hero({ onOpenInquiry, onViewWork }: HeroProps) {
             </p>
 
             <div className="border-l border-white/15 pl-4 text-xs font-code tracking-wider text-zinc-400 space-y-1">
-              <div>ALEX VANCE — LEAD WEB ARCHITECT</div>
-              <div>ELENA VANCE — HEAD OF DIGITAL GROWTH</div>
+              <div>RANIT BASAK — LEAD WEB ARCHITECT</div>
+              <div>ARNAB MAJUMDAR — HEAD OF DIGITAL GROWTH</div>
             </div>
 
             {/* CTA Buttons */}
