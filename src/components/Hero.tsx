@@ -50,9 +50,9 @@ export default function Hero({ onOpenInquiry, onViewWork }: HeroProps) {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="hidden sm:flex items-center gap-6 font-code text-[11px] tracking-widest text-zinc-400 uppercase"
           >
-            <span>BASED WORLDWIDE</span>
+            <span>BASED IN INDIA • SERVING GLOBALLY</span>
             <span>•</span>
-            <span className="text-zinc-300">ACCEPTING CLIENTS Q2 / Q3</span>
+            <span className="text-zinc-300">ACCEPTING CLIENTS</span>
             <span className="flex h-6 w-6 items-center justify-center rounded-md border border-white/12 bg-white/5 text-white">
               <ArrowUpRight className="h-3.5 w-3.5" />
             </span>

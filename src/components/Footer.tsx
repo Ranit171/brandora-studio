@@ -116,7 +116,7 @@ export default function Footer({ onOpenInquiry }: FooterProps) {
         {/* Bottom Baseline Bar */}
         <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-white/8 pt-8">
           <div className="font-code text-[11px] text-zinc-500">
-            © {new Date().getFullYear()} BRANDORA STUDIO. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} BRANDORA STUDIO • CRAFTED IN INDIA • ALL RIGHTS RESERVED.
           </div>
 
           {/* Back to top button */}

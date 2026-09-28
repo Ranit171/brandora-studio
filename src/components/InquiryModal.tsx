@@ -21,10 +21,10 @@ const SERVICE_OPTIONS = [
 ];
 
 const BUDGET_OPTIONS = [
-  '$5k — $10k',
-  '$10k — $25k',
-  '$25k — $50k',
-  '$50k+'
+  '₹50,000 — ₹1.5 Lakh',
+  '₹1.5 Lakh — ₹3.5 Lakhs',
+  '₹3.5 Lakhs — ₹7 Lakhs',
+  '₹7 Lakhs+'
 ];
 
 const TIMELINE_OPTIONS = [
@@ -40,7 +40,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
     email: '',
     company: '',
     services: ['Flagship Website'],
-    budget: '$10k — $25k',
+    budget: '₹1.5 Lakh — ₹3.5 Lakhs',
     timeline: '1 — 2 months',
     projectDetails: ''
   });
@@ -272,7 +272,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Liam Chen"
+                      placeholder="e.g. Rahul Sharma"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="mt-1.5 w-full rounded-xl border border-white/10 bg-white/4 px-4 py-2.5 text-sm text-white placeholder-zinc-600 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
@@ -286,7 +286,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                     <input
                       type="email"
                       required
-                      placeholder="liam@company.com"
+                      placeholder="rahul@company.in"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="mt-1.5 w-full rounded-xl border border-white/10 bg-white/4 px-4 py-2.5 text-sm text-white placeholder-zinc-600 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
@@ -299,7 +299,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                     </label>
                     <input
                       type="text"
-                      placeholder="e.g. Kinetic Corp"
+                      placeholder="e.g. Nexa Digital / Stealth Co."
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       className="mt-1.5 w-full rounded-xl border border-white/10 bg-white/4 px-4 py-2.5 text-sm text-white placeholder-zinc-600 focus:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"

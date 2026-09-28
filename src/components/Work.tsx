@@ -13,18 +13,7 @@ export default function Work({ projects, onSelectProject, onOpenInquiry }: WorkP
   const [filter, setFilter] = useState<'all' | 'web' | 'marketing' | 'ecommerce'>('all');
 
   const webProjects = projects.filter((p) => {
-    const cat = p.category.toLowerCase();
-    const services = p.services.map((s) => s.toLowerCase()).join(' ');
-    return (
-      cat.includes('web') ||
-      cat.includes('saas') ||
-      cat.includes('dev') ||
-      cat.includes('app') ||
-      cat.includes('portal') ||
-      cat.includes('platform') ||
-      services.includes('web') ||
-      services.includes('frontend')
-    );
+    return Boolean(p.link);
   });
 
   const marketingProjects = projects.filter((p) => {

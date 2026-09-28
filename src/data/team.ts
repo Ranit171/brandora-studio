@@ -16,7 +16,7 @@ export const FOUNDERS: Founder[] = [
       'Clean Code & Technical Architecture'
     ],
     avatar: 'https://ik.imagekit.io/ranit007/Brandora%20Studio/ChatGPT%20Image%20Sep%2027,%202026,%2011_55_56%20PM.png',
-    coordinates: 'DEV × ARCHITECTURE'
+    coordinates: 'DEV × ARCHITECTURE • INDIA'
   },
   {
     name: 'Arnab Majumdar',
@@ -33,7 +33,7 @@ export const FOUNDERS: Founder[] = [
       'Brand Positioning & Messaging'
     ],
     avatar: 'https://ik.imagekit.io/ranit007/Brandora%20Studio/IMG_4236-removebg-preview.png',
-    coordinates: 'GROWTH × ACQUISITION'
+    coordinates: 'GROWTH × ACQUISITION • INDIA'
   }
 ];
 
