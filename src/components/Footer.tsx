@@ -26,7 +26,7 @@ export default function Footer({ onOpenInquiry }: FooterProps) {
   const socialLinks = [
     { label: 'X (Twitter)', href: 'https://twitter.com' },
     { label: 'LinkedIn', href: 'https://linkedin.com' },
-    { label: 'Instagram', href: 'https://instagram.com' },
+    { label: 'Instagram', href: 'https://www.instagram.com/brandorastudio2/' },
     { label: 'GitHub', href: 'https://github.com' },
     { label: 'Dribbble', href: 'https://dribbble.com' }
   ];

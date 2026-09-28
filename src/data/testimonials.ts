@@ -7,25 +7,25 @@ import { Testimonial } from '../types';
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 'test-1',
-    clientName: 'Julian Sterling',
+    clientName: 'Ranit Basak',
     role: 'Co-Founder & CEO',
     company: 'Nova Robotics',
     quote:
       'Brandora Studio is the rarest kind of agency: they possess the visual sophistication of a high-end Paris design house combined with engineering discipline that produces sub-second, rock-solid code. Our inbound demo requests skyrocketed within three weeks of launch.',
     highlightMetric: '+240%',
     metricLabel: 'Enterprise Pipeline Growth',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop'
+    avatar: 'https://ik.imagekit.io/ranit007/Brandora%20Studio/ChatGPT%20Image%20Sep%2027,%202026,%2011_55_56%20PM.png'
   },
   {
     id: 'test-2',
-    clientName: 'Camille Dupuis',
+    clientName: 'Arnab Majumdar',
     role: 'VP of Brand & Growth',
     company: 'Arc Audio Atelier',
     quote:
       'Most agencies give you pretty designs that break under real traffic or marketers who can’t talk to developers. Having a two-person powerhouse where the developer and marketer work in absolute lockstep changed everything for our direct-to-consumer store.',
     highlightMetric: '3.4x ROAS',
     metricLabel: 'Global Media Acquisition',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop'
+    avatar: 'https://ik.imagekit.io/ranit007/Brandora%20Studio/IMG_4236-removebg-preview.png'
   },
   {
     id: 'test-3',

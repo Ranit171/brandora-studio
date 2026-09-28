@@ -134,6 +134,36 @@ export default function Services({ onOpenInquiry }: ServicesProps) {
           </div>
         </div>
 
+        {/* Web Development Live Showcase Banner */}
+        {activeTab === 'web' && (
+          <div className="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white/4 p-4 sm:p-5 backdrop-blur-md">
+            <div className="flex items-center gap-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#ff477e]/15 text-[#ff477e]">
+                <Code2 className="h-4 w-4" />
+              </span>
+              <div>
+                <p className="font-sans text-xs sm:text-sm font-medium text-white">
+                  Live Web Applications in Production: <span className="text-[#d9c7a2] font-semibold">Wanderly</span> (Luxury Travel), <span className="text-sky-400 font-semibold">Traveleo</span> (Booking Portal), and <span className="text-indigo-400 font-semibold">StoryVerse</span> (Publishing Platform)
+                </p>
+                <p className="text-[11px] font-code text-zinc-400">
+                  Engineered with React, TypeScript, reactive state engines, and edge optimization.
+                </p>
+              </div>
+            </div>
+            <a
+              href="#work"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-4 py-2 font-code text-xs font-semibold text-white transition-all hover:bg-white hover:text-black shrink-0"
+            >
+              <span>VIEW IN WORKS ARCHIVE</span>
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </a>
+          </div>
+        )}
+
         {/* Interactive Services Layout: Editorial Rows + Dynamic Live Preview */}
         <div className="mt-8 grid grid-cols-1 gap-12 lg:grid-cols-12 items-start">
           {/* Service Interactive Rows */}

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ArrowRight, ArrowUpRight, CheckCircle2, TrendingUp, Cpu } from 'lucide-react';
+import { X, ArrowRight, ArrowUpRight, CheckCircle2, TrendingUp, Cpu, Globe } from 'lucide-react';
 import { Project } from '../types';
 
 interface CaseStudyModalProps {
@@ -63,7 +63,7 @@ export default function CaseStudyModal({
         style={{ WebkitOverflowScrolling: 'touch' }}
       >
         {/* Floating Top Control Bar */}
-        <div className="sticky top-0 z-50 flex items-center justify-between border-b border-white/10 bg-[#09090b]/80 px-6 py-4 backdrop-blur-md">
+        <div className="sticky top-0 z-50 flex items-center justify-between border-b border-white/10 bg-[#09090b]/85 px-6 py-4 backdrop-blur-md">
           <div className="flex items-center gap-3">
             <span className="font-code text-xs font-bold text-white/50">{project.number}</span>
             <span className="h-3 w-px bg-white/20" />
@@ -73,6 +73,18 @@ export default function CaseStudyModal({
           </div>
 
           <div className="flex items-center gap-3">
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 font-code text-xs font-bold text-black transition-all hover:bg-[#ff477e] hover:text-white shadow-lg"
+              >
+                <span>OPEN LIVE SITE</span>
+                <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+            )}
+
             <button
               onClick={() => onNextProject(nextProject)}
               className="group hidden sm:flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-code tracking-wider text-zinc-300 transition-colors hover:border-white/30 hover:text-white"
@@ -127,6 +139,26 @@ export default function CaseStudyModal({
                 </span>
               ))}
             </div>
+
+            {/* Live Project Action CTA */}
+            {project.link && (
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-3.5 font-code text-xs font-bold uppercase tracking-widest text-black transition-all hover:bg-[#ff477e] hover:text-white shadow-xl hover:shadow-[#ff477e]/25 hover:scale-105 active:scale-95"
+                >
+                  <Globe className="h-4 w-4" />
+                  <span>VISIT LIVE PRODUCTION SITE</span>
+                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+                <span className="inline-flex items-center gap-2 font-code text-xs text-zinc-400">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                  Deployed & Active on Vercel
+                </span>
+              </div>
+            )}
           </div>
 
           {/* Large Hero Image */}
@@ -137,6 +169,18 @@ export default function CaseStudyModal({
               className="h-[50vh] sm:h-[65vh] w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-6 right-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/75 px-5 py-2.5 font-code text-xs font-semibold text-white backdrop-blur-md transition-all hover:bg-white hover:text-black hover:scale-105"
+              >
+                <span>OPEN LIVE SITE</span>
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </a>
+            )}
           </div>
 
           {/* Key Metrics Bento */}
@@ -272,13 +316,27 @@ export default function CaseStudyModal({
                 </p>
               </div>
 
-              <button
-                onClick={() => onNextProject(nextProject)}
-                className="group flex items-center gap-3 rounded-full bg-white px-8 py-4 font-code text-xs font-bold tracking-widest text-black uppercase transition-all hover:scale-105 active:scale-95"
-              >
-                <span>EXPLORE NEXT CASE</span>
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </button>
+              <div className="flex flex-wrap items-center gap-3">
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-4 font-code text-xs font-bold tracking-widest text-white uppercase transition-all hover:bg-white hover:text-black"
+                  >
+                    <span>VISIT THIS SITE</span>
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                )}
+
+                <button
+                  onClick={() => onNextProject(nextProject)}
+                  className="group flex items-center gap-3 rounded-full bg-white px-8 py-4 font-code text-xs font-bold tracking-widest text-black uppercase transition-all hover:scale-105 active:scale-95"
+                >
+                  <span>EXPLORE NEXT CASE</span>
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </button>
+              </div>
             </div>
           </div>
         </motion.div>
